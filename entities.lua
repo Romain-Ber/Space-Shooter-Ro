@@ -4,12 +4,11 @@ neutralType = 5 --nombre de types d'ennemis et de textures
 bonusType = 5 --nombre de types d'ennemis et de textures
 
 ---
-function entities.Load()
 
-end
+local Entities = {}
 
-function entities.Update(entityType)
-    if entityType = 1 then -- si une entite est generee, executer ce code
+function Entities.Load(entityType)
+    if entityType == 1 then -- si une entite est generee, executer ce code
         local ennemy = {}
         local ennemyPixelGap = 8 --taille du saut en pixels entre les textures de differentes identites--
         ennemy.Width = 8 --largeur d'une entite en fonction de ennemyType--
@@ -19,8 +18,7 @@ function entities.Update(entityType)
         ennemy.Type = math.random(0, ennemyType)
         local lastEnnemyIndex = #ennemies
         ennemies[lastEnnemyIndex + 1] = ennemy
-        return ennemies
-    elseif entityType = 2 then
+    elseif entityType == 2 then
         local neutral = {}
         local neutralPixelGap = 8 --taille du saut en pixels entre les textures de differentes identites--
         neutral.Width = 8 --largeur d'une entite en fonction de neutralType--
@@ -30,8 +28,7 @@ function entities.Update(entityType)
         neutral.Type = math.random(0, neutralType)
         local lastNeutralIndex = #neutrals
         neutrals[lastNeutralIndex + 1] = neutral
-        return neutrals
-    elseif entityType = 3 then
+    elseif entityType == 3 then
         local bonus = {}
         local bonusPixelGap = 8 --taille du saut en pixels entre les textures de differentes identites--
         bonus.Width = 8 --largeur d'une entite en fonction de bonusType--
@@ -41,7 +38,7 @@ function entities.Update(entityType)
         bonus.Type = math.random(0, bonusType)
         local lastBonusIndex = #bonuses
         bonuses[lastBonusIndex + 1] = bonus
-        return bonuses
     else
     end
 end
+return Entities

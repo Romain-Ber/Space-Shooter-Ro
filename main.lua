@@ -1,9 +1,3 @@
---- console feedback during execution
-io.stdout:setvbuf('no')
-
---- necessary for pixel art
-love.graphics.setDefaultFilter("nearest")
-
 local myGame = require("game")
 
 function love.load()

@@ -3,5 +3,17 @@
     "Lua.runtime.special": [],
     "Lua.workspace.library": [
         "${3rd}/love2d/library"
+    ],
+    "Lua.diagnostics.globals": [
+        "ennemyType",
+        "neutralType",
+        "bonusType",
+        "entities",
+        "ennemies",
+        "neutrals",
+        "bonuses",
+        "screenNoPlayLeft",
+        "screenNoPlayRight",
+        "screenNoPlayTop"
     ]
 }
