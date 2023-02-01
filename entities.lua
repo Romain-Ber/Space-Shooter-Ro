@@ -1,5 +1,6 @@
 ---VARIABLES---
 ennemyType = 27 --nombre de types d'ennemis et de textures
+bossType = 6
 neutralType = 5 --nombre de types d'ennemis et de textures
 bonusType = 5 --nombre de types d'ennemis et de textures
 
@@ -15,7 +16,7 @@ function Entities.Load(entityType)
         ennemy.Height = 8 --hauteur d'une entite en fonction de ennemyType--
         ennemy.CoordX = math.random((screenNoPlayLeft + 1), ((screenX - screenNoPlayRight) - ennemy.Width))
         ennemy.CoordY = 1
-        ennemy.Type = math.random(0, ennemyType)
+        ennemy.Type = math.random(1, ennemyType)
         local lastEnnemyIndex = #ennemies
         ennemies[lastEnnemyIndex + 1] = ennemy
     elseif entityType == 2 then
@@ -38,6 +39,16 @@ function Entities.Load(entityType)
         bonus.Type = math.random(0, bonusType)
         local lastBonusIndex = #bonuses
         bonuses[lastBonusIndex + 1] = bonus
+    elseif entityType == 4 then
+        local boss = {}
+        local neutralPixelGap = 16 --taille du saut en pixels entre les textures de differentes identites--
+        boss.Width = 16 --largeur d'une entite en fonction de bossType--
+        boss.Height = 16 --hauteur d'une entite en fonction de bossType--
+        boss.CoordX = math.random((screenNoPlayLeft + 1), ((screenX - screenNoPlayRight) - boss.Width))
+        boss.CoordY = 1
+        boss.Type = math.random(1, bossType)
+        local lastBossIndex = #bosses
+        bosses[lastBossIndex + 1] = boss
     else
     end
 end
