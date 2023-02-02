@@ -18,5 +18,7 @@
         "screenNoPlayRight",
         "screenNoPlayTop",
         "currentLevel",
+        "createEntityTimer",
+        "ennemiesPerSecond"
     ]
 }

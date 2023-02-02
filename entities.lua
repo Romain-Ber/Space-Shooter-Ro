@@ -53,7 +53,7 @@ function Entities.CreateEntity(dt)
             bosses[lastBossIndex + 1] = boss
         else
         end
-        timer = 0
+        createEntityTimer = 0
     else
     end
 end
