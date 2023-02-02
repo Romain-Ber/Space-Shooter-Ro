@@ -7,7 +7,7 @@ function love.load()
 end
 
 function love.update(dt)
-
+    myGame.Update(dt)
 end
 
 function love.draw()

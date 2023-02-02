@@ -5,17 +5,18 @@
         "${3rd}/love2d/library"
     ],
     "Lua.diagnostics.globals": [
-        "ennemyType",
-        "neutralType",
-        "bonusType",
+        "ennemyTypes",
+        "neutralTypes",
+        "bonusTypes",
+        "bossTypes",
         "entities",
         "ennemies",
         "neutrals",
         "bonuses",
+        "bosses",
         "screenNoPlayLeft",
         "screenNoPlayRight",
         "screenNoPlayTop",
-        "bossType",
-        "bosses"
+        "currentLevel",
     ]
 }
