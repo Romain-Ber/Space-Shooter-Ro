@@ -1,12 +1,21 @@
 local Entities = {}
 
 function Entities.Load()
+    screenNoPlayLeft = 100 --variable definissant la zone non jouable a gauche en pixels
+    screenNoPlayRight = 100 --variable definissant la zone non jouable a droite en pixels
+    screenNoPlayTop = 0 --variable definissant la zone non jouable en haut en pixels
+    screenNoPlayRight= 0 --variable definissant la zone non jouable en bas en pixels
     ennemyTypes = 19 --nombre de types d'ennemis et de textures
     bossTypes = 6
     neutralTypes = 5 --nombre de types d'ennemis et de textures
     bonusTypes = 5 --nombre de types d'ennemis et de textures
     createEntityTimer = 0
-    ennemiesPerSecond = 0.5
+    ennemiesPerSecond = 20
+    ennemies = {}
+    neutrals = {}
+    bonuses = {}
+    bosses = {}
+    currentLevel = 1
 end
 
 function Entities.CreateEntity(dt)
